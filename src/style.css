@@ -1,0 +1,33 @@
+.canvas{
+    border: solid 1px;
+    cursor: url ("pencilcursor.gif"), default;
+}
+.tools, .pencil, .eraser{
+    width: 70px;
+    height: 70px;
+}
+.tools div{
+    background-color: black;
+}
+.smallest{
+    width: 10px;
+    height: 10px;
+}
+.small{
+    width: 20px;
+    height: 20px;
+}
+.medium{
+    width: 30px;
+    height: 30px;
+}
+.large{
+    width: 40px;
+    height: 40px;
+}
+.tools div:hover {
+    border:solid rgb(171, 87, 209);
+}
+.tools img:hover{
+    border:solid rgb(171, 87, 209);
+}
