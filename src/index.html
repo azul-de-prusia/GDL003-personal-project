@@ -18,38 +18,23 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	</head>
 <style type="text/css">
-		canvas {
-			border : solid 1px;
-			cursor : url('lapizcursor.gif'), default;
-		}
-		.herramientas {
-			width: 100px;
-		}
-		.herramientas div {
-			background-color: black;
-		}
-		.herramientas div:hover{
-			border: solid red 1px;
-		}
-		.herramientas img:hover{
-			border: solid red 1px;
-		}
+		
 	</style>
-	<body>
+	<script>
+	</script>
+	<body>	
 		<table>
-			<tr>
-				<td><canvas width="500" height="500" id="canvas" onmousemove="pintar(event);" onmousedown="activar();" onmouseup="desactivar();"></canvas></td>
-				<td class="herramientas">
-					<a href="#" onclick="lapiz();"><img src="lapiz.png" /></a>
-					<a href="#" onclick="borrador();"><img src="borrador.png" /></a>
-					<div style="width: 10px; height: 10px;" onclick="stamano(10);"></div><br />
-					<div style="width: 20px; height: 20px;" onclick="stamano(20);"></div><br />
-					<div style="width: 30px; height: 30px;" onclick="stamano(30);"></div><br />
-					<div style="width: 40px; height: 40px;" onclick="stamano(40);"></div><br />
-					<input type="color" id="colores" onchange="scolor();"/>
-					<a href="#" download="canvas.png" id="guardarimagen" >Guardar como imagen</a>
-				</td>
-			</tr>
+			<td><canvas width="500" height="500"id=canvas></canvas></td>
+			<td class="tools">
+				<a href="#"><img src="pencil.png"/></a>
+				<a href="#"><img src="eraser.png"/></a>
+				<div></div><br>
+				<div></div><br>
+				<div></div><br>
+				<div></div><br>
+				<input type="color" id="colorselector"/>
+				<a href="#">Save as image</a>
+			</td>
 		</table>
 	</body>
 </html>
