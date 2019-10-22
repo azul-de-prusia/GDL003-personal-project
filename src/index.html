@@ -11,19 +11,21 @@
 		<meta name="description" content="">
 		<meta name="author" content="satur">
 
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		<link rel="stylesheet" href="style.css" />
+		<script src="app.js"></script>
 	</head>
 
 	<script>
+		
 	</script>
 	<body>	
 		<table>
-			<td><canvas width="500" height="500"class="canvas"></canvas></td>
+			<td><canvas width="500" height="500" id="canvas" class="canvas" onmousemove="painting(event);" onmousedown="activate();" onmouseup="deactivate();" ></canvas></td>
 			<td class="tools">
 				<a href="#"><img src="pencil.png" class="pencil"/></a>
 				<a href="#"><img src="eraser.png"class="eraser"/></a>
@@ -35,5 +37,6 @@
 				<a href="#">Save as image</a>
 			</td>
 		</table>
+		
 	</body>
 </html>
