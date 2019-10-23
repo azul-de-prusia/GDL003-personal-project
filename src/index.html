@@ -27,16 +27,17 @@
 		<table>
 			<td><canvas width="500" height="500" id="canvas" class="canvas" onmousemove="painting(event);" onmousedown="activate();" onmouseup="deactivate();" ></canvas></td>
 			<td class="tools">
-				<a href="#"><img src="pencil.png" class="pencil"/></a>
-				<a href="#"><img src="eraser.png"class="eraser"/></a>
-				<div class="smallest"></div><br>
-				<div class="small"></div><br>
-				<div class="medium"></div><br>
-				<div class="large"></div><br>
-				<input type="color" id="colorselector"/>
-				<a href="#">Save as image</a>
+				<a href="#" onclick="pencil ();"><img src="pencil.png" class="pencil"/></a>
+				<a href="#" onclick="eraser ();"><img src="eraser.png"class="eraser"/></a>
+				<div class="smallest" onclick="sizeselector(10);"></div><br>
+				<div class="small" onclick="sizeselector(20);"></div><br>
+				<div class="medium" onclick="sizeselector(30);"></div><br>
+				<div class="large" onclick="sizeselector(40);"></div><br>
+				<input type="color" id="colorselector" onchange="scolor ();"/>
+				<a href="#" download="canvas.png" id="saveasimage">Save as image</a>
 			</td>
 		</table>
+		<script>document.getElementById("saveasimage").addEventListener("click", save, false);</script>
 		
 	</body>
 </html>
