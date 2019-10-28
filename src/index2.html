@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style2.css" />
+		<script src="app2.js" defer></script>
+	</head>
+    <body>
+        <div id="controls" class="controls">
+            <div id="clear" class="container">
+                <p><input type="button" id="canvasClear" value="Clear"></p>
+                <input type="file" id="fileImg"> 
+                <p class="name" >Setting</p>
+            </div>
+         <div id="size" class="container">
+            <p><label>Width</label>
+                <input type="number" id="canvaswidth" value="800" min="0"/></p>    
+                <label>Height</label>
+            <input type="number" id="canvasheight" value="480" min="0"/>
+            </div>
+                <p class="name">Size</p>
+            <div id="mouseposition" class="container">
+                    <p><label>Mouse X</label><label id="moouseX">0</label> </p>
+                   <label>Mouse Y</label><label id="moouseY">0</label>
+                   <p class="name">Position</p>
+            </div>
+            <div id="tools" class="container">
+                <div id="toolImages">
+                    <img id="pencil" class="pencil" src="pencil.png">
+                    <img id="pencil" class="pencil" src="eraser.png">
+                </div>
+                <p class="name">Tools</p>
+            </div>
+            <div id="toolSize" class="container">
+                <details open>
+                    <summary>Size</summary>
+                    <ul>
+                        <li id="small">Small</li>
+                        <li id="medium">Medium</li>
+                        <li id="large">Large</li>
+                    </ul>
+                </details>
+                <p class="name">Tool size</p>
+            </div>
+        </div>
+        <div id="canvases">
+            <canvas id="backcanvas" width="480" height="800"></canvas>
+            <canvas id="frontcanvas" width="480" height="800"></canvas>    
+        </div>
+        <div class="properties" id="properties">
+            <p id="propertiesTitle">Image</p>
+            <p><label>Width : </label><input id="imgwidth" type="number" min="0"></p>
+            <p><label>Height : </label><input id="imgheight" type="number" min="0"></p>
+            <input type="button" id="invert" value="Invert image"/>
+        </div>
+    </body>
+</html>

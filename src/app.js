@@ -36,6 +36,37 @@ function pencil (){
     color = document.getElementById("colorselector").value;
     document.getElementById("colorselector").removeAttribute("disabled");
 }
+function circle (){
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+      
+    context.beginPath();
+    context.arc(100, 100, 50, 0, 2*Math.PI);
+    context.strokeStyle = '#000000';
+    context.stroke();
+    context.fillStyle = '#FFFFFF';
+    context.fill();
+    }
+
+function square (){
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+
+    context.beginPath();
+    context.rect(20, 40, 50, 50);
+    context.strokeStyle = '#000000';
+    context.stroke();
+    context.fillStyle = '#7f7f87';
+    context.fill();
+    context.closePath();
+}    
+//this paragraph opens the image from our documents into the canvas
+window.URL = window.URL || window.webkitURL || window.mozURL;
+document.getElementById('file').onchange = function() {
+    var url = URL.createObjectURL(this.files[0]);
+    console.log(url);
+    document.getElementById('preview').src = url;
+};
 
 function scolor (){
     color = document.getElementById("colorselector").value;
@@ -49,7 +80,6 @@ function save (){
     var canvas = document.getElementById("canvas");
     var image = canvas.toDataURL("image/png");
     this.href = image;
-    //document.getElementById("saveasimage").addEventListener("click", save, false);
+//document.getElementById("saveasimage").addEventListener("click", save, false)
 }
 
-// var add = ( x, y ) => x + y;

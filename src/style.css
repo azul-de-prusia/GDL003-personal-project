@@ -2,12 +2,13 @@
     border: solid 1px;
     cursor: url ("pencilcursor.gif"), default;
 }
-.tools, .pencil, .eraser{
+.tools, .pencil, .eraser, .circle, .square{
     width: 70px;
     height: 70px;
 }
 .tools div{
     background-color: black;
+    margin-left: 10px;
 }
 .smallest{
     width: 10px;
@@ -30,4 +31,11 @@
 }
 .tools img:hover{
     border:solid rgb(171, 87, 209);
+}
+.tools{
+    align-content: top;
+    align-items: top;
+}
+#upload{
+    display:none
 }

@@ -7,7 +7,7 @@
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>plantillapaint</title>
+		<title>Fingertip</title>
 		<meta name="description" content="">
 		<meta name="author" content="satur">
 
@@ -25,19 +25,21 @@
 	</script>
 	<body>	
 		<table>
-			<td><canvas width="500" height="500" id="canvas" class="canvas" onmousemove="painting(event);" onmousedown="activate();" onmouseup="deactivate();" ></canvas></td>
+			<td><canvas width="500" height="800" id="canvas" class="canvas" onmousemove="painting(event);" onmousedown="activate();" onmouseup="deactivate();" ></canvas></td>
 			<td class="tools">
-				<a href="#" onclick="pencil ();"><img src="pencil.png" class="pencil"/></a>
-				<a href="#" onclick="eraser ();"><img src="eraser.png"class="eraser"/></a>
+				<a href="#" onclick="pencil ();"><img src="pencil.png" class="pencil"/></a><br>
+				<a href="#" onclick="eraser ();"><img src="eraser.png"class="eraser"/></a><br>
+				<a href="#" onclick="circle();"><img src="circle.png" class="circle"></a><br>
+				<a href="#" onclick="square();"><img src="square.png" class="square"></a><br>
 				<div class="smallest" onclick="sizeselector(10);"></div><br>
-				<div class="small" onclick="sizeselector(20);"></div><br>
+				<div class="small" onclick="sizeselector(20);"></div><br> 
 				<div class="medium" onclick="sizeselector(30);"></div><br>
 				<div class="large" onclick="sizeselector(40);"></div><br>
-				<input type="color" id="colorselector" onchange="scolor ();"/>
-				<a href="#" download="canvas.png" id="saveasimage">Save as image</a>
+				<input type="color" id="colorselector" onchange="scolor ();"/><br>
+				<input type="file" id="file"><img id="preview"><br>
+				<button><a href="#" download="canvas.png" id="saveasimage">Save as image</a></button>
 			</td>
 		</table>
 		<script>document.getElementById("saveasimage").addEventListener("click", save, false);</script>
-		
 	</body>
 </html>
